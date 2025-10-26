@@ -10,6 +10,8 @@ export const HeaderContainer = styled.header`
   background-color: #4682b4;
   display: flex;
   align-items: center;
+  transition: background-color .2s;
+  background-color: ${({ theme }) => theme.colors.backgroundPrimary};
 `
 
 export const Container = styled.div`
@@ -19,6 +21,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative
 `
 
 export const StyledNavLink = styled(NavLink)`
@@ -29,4 +32,14 @@ export const StyledNavLink = styled(NavLink)`
   &.active {
     color: #ffffff33;
   }
+`
+export const ToggleButton = styled.div`
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+`
+
+export const Button = styled.button`
+  border-radius: 7px;
 `
